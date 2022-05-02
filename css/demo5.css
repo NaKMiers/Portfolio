@@ -1,0 +1,104 @@
+.demo-5 {
+	--color-text: #fff;
+	--color-bg: #0F1617;
+	--color-link: #4dc4a8;
+	--color-link-hover: #333;
+	--color-info: #ac1122;
+	--color-title: #fff;
+	--color-subtitle: #fff;
+    --color-subtitle-bg: #4dc4a8;
+}
+
+.content__title {
+	font-size: 10vw;
+	font-weight: normal;
+	color: var(--color-title);
+	text-align: center;
+	margin: 0;
+	pointer-events: none;
+}
+
+.content__subtitle {
+	font-size: 1.25em;
+	background: var(--color-subtitle-bg);
+	color: var(--color-subtitle);
+	padding: 0.45em 0.5em;
+	line-height: 1;
+	margin: 0;
+	letter-spacing: 0.5em;
+	text-indent: 0.5em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.introduce_content {
+	max-width: 680px;
+	text-align: center;
+}
+.heading {
+	font-size: 36px;
+}
+.introduce {
+	font-size: 18px;
+	padding: 0;
+	margin: 0px 0px !important;
+	line-height: 28px;
+	opacity: 0.9;
+}
+.contact {
+	margin-top: 20px !important;
+	opacity: 0.9;
+}
+
+.work-heading {
+	text-align: center;
+	font-size: 40px;
+}
+
+.my_work_list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.my_work_item {
+	font-size: 24px;
+	opacity: 0.9;
+	margin: 18px 0px;
+	font-weight: 500;
+	transition: all 0.3s ease-in-out;
+}
+.my_work_item:hover {
+	position: relative;
+	margin-right: -24px
+}
+.my_work_item:hover .work-number {
+	visibility: visible;
+	margin-left: -16px;
+}
+
+.work-number {
+	position: absolute;
+	visibility: hidden;
+	font-size: 18px;
+	margin-left: -8px;
+	transition: all 0.3s ease-in-out;
+}
+
+
+.footer {
+	font-size: 12px;
+	padding: 44px 0px;
+	text-align: center;
+	margin-top: px
+}
+
+@media screen and (max-width: 55em) {
+	.content__title {
+		font-size: 3.5em;
+	}
+	.content__subtitle {
+		font-size: 0.85em;
+	}
+}
