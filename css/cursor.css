@@ -1,117 +1,28 @@
+
 * {
-   /* cursor: none; */
+   cursor: none;
 }
 
-.cursor {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 32px;
-   height: 32px;
-   background-color: #fff;
+.cursor-dot,
+.cursor-dot-outline {
    pointer-events: none;
-   border-radius: 50% 100% 100% 100%;
-   z-index: 9999999;
-   mix-blend-mode: difference;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   border-radius: 50%;
    opacity: 0;
+   transform: translate(-50%, -50%);
+   transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
-html,
-body {
-   padding: 0;
-   margin: 0;
-   color: #28282e;
-   min-height: 100vh;
-   font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-   background: #fff;
+.cursor-dot {
+   width: 8px;
+   height: 8px;
+   background-color: #303733;
 }
 
-* {
-   box-sizing: border-box;
-}
-
-h1 {
-   font-size: 4vh;
-   margin-bottom: 0;
-   letter-spacing: -0.05em;
-   word-spacing: -0.02em;
-   text-transform: uppercase;
-}
-
-p {
-   margin-bottom: 3vh;
-   color: #888;
-}
-
-.container {
-   width: 60rem;
-   margin: 0 auto;
-   max-width: 100%;
-   padding: 0 1rem;
-}
-
-.gallery {
-   display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-   grid-gap: 1rem;
-}
-
-.gallery--item {
-   display: block;
-}
-
-.gallery--item:first-of-type {
-   grid-column: span 2;
-}
-
-.gallery--item:last-of-type {
-   grid-column: span 2;
-}
-
-.gallery--img {
-   display: block;
-   margin: 0 auto;
-   width: 100%;
-   height: 33vh;
-   max-height: 300px;
-   border-radius: 10px;
-   -o-object-fit: cover;
-   object-fit: cover;
-   background: #292935;
-   transition: 0.4s ease-in-out 0.1s;
-   box-shadow: 0 0px 12px rgba(0, 0, 0, 0);
-}
-
-.gallery--img:hover {
-   transform: translateY(-4px);
-   box-shadow: 0 2px 48px -2px rgba(0, 0, 0, 0.3);
-}
-
-.socials {
-   position: fixed;
-   left: 16px;
-   bottom: 8px;
-   z-index: 1;
-}
-
-.socials a[href*=dribbble] {
-   color: #EA4C89;
-}
-
-.socials a[href*=instagram] {
-   color: #282b2b;
-}
-
-.socials svg {
-   width: 2rem;
-   height: 2rem;
-   margin-right: 0.5rem;
-}
-
-a {
-   color: #6E30EC;
-}
-
-a:hover {
-   color: #4d22a5;
+.cursor-dot-outline {
+   width: 44px;
+   height: 44px;
+   border: 2px solid #303733
 }

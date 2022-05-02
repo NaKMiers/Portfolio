@@ -38,6 +38,46 @@
 .heading {
 	font-size: 36px;
 }
+.wave {
+	animation-name: wave-animation;
+	animation-duration: 2.5s;
+	animation-iteration-count: infinite;
+	transform-origin: 70% 70%;
+	display: inline-block;
+}
+@keyframes wave-animation {
+	0% {
+		transform: rotate(0.0deg)
+	}
+
+	10% {
+		transform: rotate(14.0deg)
+	}
+
+	20% {
+		transform: rotate(-8.0deg)
+	}
+
+	30% {
+		transform: rotate(14.0deg)
+	}
+
+	40% {
+		transform: rotate(-4.0deg)
+	}
+
+	50% {
+		transform: rotate(10.0deg)
+	}
+
+	60% {
+		transform: rotate(0.0deg)
+	}
+
+	100% {
+		transform: rotate(0.0deg)
+	}
+}
 .introduce {
 	font-size: 18px;
 	padding: 0;
@@ -46,6 +86,7 @@
 	opacity: 0.9;
 }
 .contact {
+	font-size: 18px;
 	margin-top: 20px !important;
 	opacity: 0.9;
 }
@@ -84,14 +125,84 @@
 	font-size: 18px;
 	margin-left: -8px;
 	transition: all 0.3s ease-in-out;
+	opacity: 0.9
+}
+
+.socical_heading {
+	
+}
+.soical_list {
+	display: flex;
+	justify-content: space-between;
+	/* list-style-type: none; */
+}
+.social_item {
+
+}
+.social_icon {
+	font-size: 40px;
+}
+
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 60rem;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 0 1rem;
+	min-height: 100vh;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-gap: 1rem;
+}
+
+.gallery--item {
+	display: block;
+}
+
+.gallery--item:first-of-type {
+	grid-column: span 2;
+}
+
+.gallery--item:last-of-type {
+	grid-column: span 2;
+}
+
+.gallery--img {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	height: 33vh;
+	max-height: 300px;
+	border-radius: 10px;
+	-o-object-fit: cover;
+	object-fit: cover;
+	background: #292935;
+	transition: 0.4s ease-in-out;
+	box-shadow: 0 0px 12px rgba(0, 0, 0, 0);
+}
+
+.gallery--img:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 2px 48px -2px rgba(0, 0, 0, 0.3);
 }
 
 
 .footer {
 	font-size: 12px;
-	padding: 44px 0px;
+	padding: 44px 1rem;
 	text-align: center;
-	margin-top: px
+	margin-top: 10%;
+	font-family: Arial, Helvetica, sans-serif;
+	opacity: 0.6
+}
+.link {
+	text-decoration: underline;
 }
 
 @media screen and (max-width: 55em) {
