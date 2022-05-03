@@ -1,3 +1,9 @@
+/* width */
+::-webkit-scrollbar {
+	width: 0;
+}
+
+
 .demo-5 {
 	--color-text: #fff;
 	--color-bg: #0F1617;
@@ -222,7 +228,7 @@
 /* scroll to top btn */
 .scroll-to-top-btn {
 	position: fixed;
-	bottom: 44px;
+	bottom: 80px;
 	right: calc((100vw - 60rem + 8px)/2);
 	outline: none;
 	border: none;
@@ -236,7 +242,6 @@
 	z-index: 1;
 }
 
-
 /* footer */
 .footer {
 	font-size: 12px;
@@ -245,7 +250,6 @@
 	margin-top: 10%;
 	font-family: Arial, Helvetica, sans-serif;
 	opacity: 0.6;
-	width: 60rem;
 	margin: auto
 }
 .link {
@@ -259,6 +263,7 @@
 	.content__subtitle {
 		font-size: 0.85em;
 	}
+	
 }
 
 @media screen and (max-width: 48.75rem) {
@@ -273,5 +278,16 @@
 	.my_work_list {
 		align-items: flex-start;
 	}
+}
 
+@media screen and (max-width: 60rem) {
+	.scroll-to-top-btn {
+		right: 16px;
+	}
+}
+
+@media screen and (max-width: 55em) {
+	.footer {
+		margin-top: 110px;
+	}
 }
