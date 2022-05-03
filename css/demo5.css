@@ -19,6 +19,7 @@
 }
 
 .content__subtitle {
+	text-align: center;
 	font-size: 1.25em;
 	background: var(--color-subtitle-bg);
 	color: var(--color-subtitle);
