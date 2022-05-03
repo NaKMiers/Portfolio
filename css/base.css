@@ -115,9 +115,7 @@ a  {
 	transition: all 0.1s ease-in-out;
 }
 
-a:hover,
-
-.hover-underline-animation  {
+a:hover, .hover-underline-animation  {
 	display: inline-block;
 	position: relative;
 }

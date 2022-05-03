@@ -91,16 +91,22 @@
 	opacity: 0.9;
 }
 
+/* work content */
 .work-heading {
 	text-align: center;
 	font-size: 40px;
+}
+
+/* work content */
+.work_content {
+	text-align: center
 }
 
 .my_work_list {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	/* justify-content: center; */
 }
 
 .my_work_item {
@@ -109,10 +115,12 @@
 	margin: 18px 0px;
 	font-weight: 500;
 	transition: all 0.3s ease-in-out;
+	opacity: 0.5
 }
 .my_work_item:hover {
 	position: relative;
-	margin-right: -24px
+	margin-right: -24px;
+	opacity: 1
 }
 .my_work_item:hover .work-number {
 	visibility: visible;
@@ -128,19 +136,35 @@
 	opacity: 0.9
 }
 
+/* social content */
+.social_content {
+	text-align: center
+}
+
 .socical_heading {
-	
+	/* text-align: center; */
 }
 .soical_list {
-	display: flex;
-	justify-content: space-between;
-	/* list-style-type: none; */
+	/* display: flex;
+	justify-content: space-between; */
+	list-style-type: none;
+	padding: 0;
+	margin: 0
 }
 .social_item {
-
+	display: inline-block;
+	margin: 5px
 }
 .social_icon {
-	font-size: 40px;
+	font-size: 32px;
+	padding-bottom: 5px;
+}
+.social_icon:hover  {
+	animation-name: wave-animation;
+	animation-duration: 2.5s;
+	animation-iteration-count: infinite;
+	transform-origin: 70% 70%;
+	display: inline-block;
 }
 
 
@@ -192,7 +216,25 @@
 	box-shadow: 0 2px 48px -2px rgba(0, 0, 0, 0.3);
 }
 
+/* scroll to top btn */
+.scroll-to-top-btn {
+	position: fixed;
+	bottom: 44px;
+	right: 16px;
+	outline: none;
+	border: none;
+	height: 45px;
+	width: 50px;
+	background: rgba(0, 0, 0, 0.4);
+	color: #fff;
+	transition: all 0.5s ease-in-out;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1;
+}
 
+
+/* footer */
 .footer {
 	font-size: 12px;
 	padding: 44px 1rem;
@@ -212,4 +254,19 @@
 	.content__subtitle {
 		font-size: 0.85em;
 	}
+}
+
+@media screen and (max-width: 780px) {
+	.introduce_content,
+	.work_content, .social_content{
+		display: flex;
+		align-items: flex-start;
+		margin: 0px 16px;
+		text-align: left;
+	}
+
+	.my_work_list {
+		align-items: flex-start;
+	}
+
 }

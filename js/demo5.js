@@ -97,3 +97,30 @@ window.addEventListener('resize', function () {
    resizeTm = clearTimeout(resizeTm)
    resizeTm = setTimeout(onResize, 200)
 })
+
+// scroll to top
+var scrollToTopBtn = document.getElementById('scroll-to-top-btn')
+
+function scrollToTop() {
+   window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+   })
+}
+
+const toggleVisible = () => {
+   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      Object.assign(scrollToTopBtn.style, {
+         visibility: 'visible',
+         opacity: 1,
+      })
+   } else {
+      Object.assign(scrollToTopBtn.style, {
+         visibility: 'hidden',
+         opacity: 0,
+      })
+   }
+}
+
+window.addEventListener('scroll', toggleVisible)
+scrollToTopBtn.addEventListener('click', scrollToTop)
