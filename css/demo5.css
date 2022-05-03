@@ -115,7 +115,7 @@
 	margin: 18px 0px;
 	font-weight: 500;
 	transition: all 0.3s ease-in-out;
-	opacity: 0.5
+	opacity: 0.8
 }
 .my_work_item:hover {
 	position: relative;
@@ -141,9 +141,9 @@
 	text-align: center
 }
 
-.socical_heading {
-	/* text-align: center; */
-}
+/* .socical_heading {
+	text-align: center;
+} */
 .soical_list {
 	/* display: flex;
 	justify-content: space-between; */
@@ -153,11 +153,12 @@
 }
 .social_item {
 	display: inline-block;
-	margin: 5px
+	margin: 5px;
 }
 .social_icon {
 	font-size: 32px;
 	padding-bottom: 5px;
+	opacity: 0.8
 }
 .social_icon:hover  {
 	animation-name: wave-animation;
@@ -165,6 +166,7 @@
 	animation-iteration-count: infinite;
 	transform-origin: 70% 70%;
 	display: inline-block;
+	opacity: 1
 }
 
 
@@ -220,7 +222,7 @@
 .scroll-to-top-btn {
 	position: fixed;
 	bottom: 44px;
-	right: 16px;
+	right: calc((100vw - 60rem + 8px)/2);
 	outline: none;
 	border: none;
 	height: 45px;
@@ -241,7 +243,9 @@
 	text-align: center;
 	margin-top: 10%;
 	font-family: Arial, Helvetica, sans-serif;
-	opacity: 0.6
+	opacity: 0.6;
+	width: 60rem;
+	margin: auto
 }
 .link {
 	text-decoration: underline;
@@ -256,7 +260,7 @@
 	}
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 48.75rem) {
 	.introduce_content,
 	.work_content, .social_content{
 		display: flex;
