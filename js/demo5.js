@@ -68,11 +68,7 @@ function render(a) {
    requestAnimationFrame(render)
    for (var i = 0; i < geometry.vertices.length; i++) {
       var vector = geometry.vertices[i]
-      var ratio = noise.simplex3(
-         vector._o.x * 0.01,
-         vector._o.y * 0.01 + a * 0.0005,
-         vector._o.z * 0.01
-      )
+      var ratio = noise.simplex3(vector._o.x * 0.01, vector._o.y * 0.01 + a * 0.0005, vector._o.z * 0.01)
       vector.copy(vector._o)
       vector.multiplyScalar(1 + ratio * 0.1)
       vector.multiplyScalar(1)
@@ -120,6 +116,14 @@ const toggleVisible = () => {
          opacity: 0,
       })
    }
+}
+
+const moreDetail = document.querySelector('.more-detail')
+const moreDetailContent = document.querySelector('.more-detail-content')
+moreDetail.onclick = () => {
+   // moreDetailContent.style.height = '100rem'
+   // moreDetailContent.style.maxHeight = '80vh'
+   console.log(moreDetailContent.offsetHeight)
 }
 
 window.addEventListener('scroll', toggleVisible)

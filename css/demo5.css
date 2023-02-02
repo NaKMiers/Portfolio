@@ -97,6 +97,18 @@
 	opacity: 0.9;
 }
 
+.more-detail {
+	color: var(--color-link);
+}
+
+.more-detail-content {
+	margin-top: 14px;
+	font-size: 5px !important;
+	overflow: hidden;
+	transition: all 0.5s ease-in;
+	display: none;
+}
+
 .contact {
 	font-size: 18px;
 	margin-top: 20px !important;

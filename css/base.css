@@ -73,6 +73,9 @@ textarea {overflow:auto;vertical-align:top;}
 table {
 	border-collapse:collapse;border-spacing:0;
 }
+ul {
+	list-style-type: none;
+}
 *,
 *::after,
 *::before  {
