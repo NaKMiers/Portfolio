@@ -376,7 +376,7 @@ a.demo--current  {
 		display: block;
 		padding: 0.85em;
 	}
-	.content:not(.content--fixed)  {
+	.content:not(.content--fixed), .container {
 		margin-bottom: 6em;
 	}
 	.codrops-header  {

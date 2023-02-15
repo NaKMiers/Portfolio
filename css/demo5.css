@@ -105,6 +105,7 @@
 	color: #333;
 	font-size: 16px;
 	padding: 16px;
+	text-align: left;
 }
 
 .mg-0 {
@@ -207,10 +208,10 @@
 	flex-direction: column;
 	justify-content: center;
 	width: 60rem;
-	margin: 0 auto;
 	max-width: 100%;
 	padding: 0 1rem;
-	min-height: 100vh;
+	min-height: 150vh;
+	margin-bottom: 8em;
 }
 
 .gallery {
@@ -252,6 +253,10 @@
 
 
 /* PAYMENTS */
+.payment_content {
+	margin-bottom: 6em;
+}
+
 .slideshow-container {
 	position: relative;
 	max-width: 500px;
@@ -357,8 +362,8 @@
 	transform: translateY(-50%);
 	border: none;
 	color: #ddd;
-	width: 40px;
 	font-size: 32px;
+	padding: 0px 10px;
 	background: transparent;
 	transition: 0.3s ease-in-out;
 }
@@ -377,8 +382,8 @@
 	transform: translateY(-50%);
 	border: none;
 	color: #ddd;
-	width: 40px;
 	font-size: 32px;
+	padding: 0px 10px;
 	background: transparent;
 	transition: 0.3s ease-in-out;
 }
