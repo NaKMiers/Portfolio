@@ -101,13 +101,16 @@
 	color: var(--color-link);
 }
 
-.more-detail-content {
-	margin-top: 14px;
-	font-size: 5px !important;
-	overflow: hidden;
-	transition: all 0.5s ease-in;
-	display: none;
+.collapse-content {
+	color: #333;
+	font-size: 16px;
+	padding: 16px;
 }
+
+.mg-0 {
+	margin: 0;
+}
+
 
 .contact {
 	font-size: 18px;
@@ -247,6 +250,215 @@
 	box-shadow: 0 2px 48px -2px rgba(0, 0, 0, 0.3);
 }
 
+
+/* PAYMENTS */
+.slideshow-container {
+	position: relative;
+	max-width: 500px;
+	width: 100%;
+	background: #000;
+	height: 350px;
+	border-radius: 12px;
+	background-color: #fff;
+}
+
+.payment-heading {
+	text-align: center;
+	font-size: 40px;
+}
+
+.my-slide {
+	position: relative;
+	display: none;
+	width: 100%;
+	height: 100%;
+	padding: 20px 22px 50px 22px;
+	text-align: center;
+}
+
+.my-slide.active {
+	display: flex;
+	animation: fadein 0.8s ease-in-out;
+}
+
+.slide-content-left {
+	width: 39%;
+}
+
+.logo {
+	width: 70%;
+	transition: 0.4s ease-in-out;
+}
+.logo:hover {
+	transform: translateY(-3px);
+}
+
+.payment-info {
+	color: #333;
+	margin: auto;
+	padding: 20px;
+}
+
+.payment-info p {
+	line-height: 16px;
+}
+
+.payment-label {
+	color: #666;
+	margin: 0;
+}
+
+.slide-content-right {
+	width: 61%;
+	padding: 0px 5px 0px 6px;
+}
+.qr {
+	display: inline-block;
+	transition: 0.4s ease-in-out;
+}
+.qr:hover {
+	transform: translateY(-3px);
+}
+
+.qr.qr-momo {
+	width: 85%;
+	border-radius: 8px;
+}
+
+.qr.qr-banking {
+	width: 58%;
+}
+
+.qr.qr-paypal {
+	width: 100%;
+}
+
+.title {
+	display: block;
+	position: absolute;
+	bottom: 16px;
+	color: #333;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 22px;
+	line-height: 22px;
+	font-weight: bold;
+	transition: 0.3s ease-in-out;
+}
+
+.title:hover {
+	transform: translateX(-50%) translateY(-3px);
+}
+
+.prev-btn {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	border: none;
+	color: #ddd;
+	width: 40px;
+	font-size: 32px;
+	background: transparent;
+	transition: 0.3s ease-in-out;
+}
+
+.prev-btn:hover {
+	color: #666;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	transform: translateY(-53%) scale(1.1);
+	box-shadow: 0 2px 24px -2px rgba(0, 0, 0, 0.2);
+}
+
+.next-btn {position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	border: none;
+	color: #ddd;
+	width: 40px;
+	font-size: 32px;
+	background: transparent;
+	transition: 0.3s ease-in-out;
+}
+
+.next-btn:hover {
+	color: #666;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	transform: translateY(-53%) scale(1.1);
+	box-shadow: 0 2px 24px -2px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}@-moz-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+/* Internet Explorer */
+@-ms-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
 /* scroll to top btn */
 .scroll-to-top-btn {
 	position: fixed;
@@ -294,7 +506,8 @@
 
 	.introduce_content,
 	.work_content,
-	.social_content {
+	.social_content,
+	.payment_content {
 		display: flex;
 		align-items: flex-start;
 		margin: 0px 16px;
@@ -317,3 +530,78 @@
 		margin-top: 110px;
 	}
 }
+
+
+@media screen and (max-width: 31.25rem) {
+	.slideshow-container {
+		position: relative;
+		height: auto;
+	}
+
+	.my-slide {
+		position: relative;
+		display: none;
+		width: 100%;
+		height: 100%;
+		padding: 20px 22px 50px 22px;
+		text-align: center;
+	}
+
+	.my-slide.active {
+		flex-direction: column;
+	}
+
+	.slide-content-left {
+		width: 100%;
+	}
+
+	.logo {
+		width: 20% !important;
+	}	
+	
+	.payment-info {
+		padding: 20px 0px;
+	}
+
+	.slide-content-right {
+		width: 100%;
+		padding: 0;
+	}
+
+	.qr.qr-momo {
+		width: 80%;
+		border-radius: 8px;
+	}
+
+	.qr.qr-banking {
+		width: 60%;
+	}
+
+	.qr.qr-paypal {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 18.75rem) {
+	.logo {
+		width: 30% !important;
+	}
+
+	.payment-info {
+		font-size: 14px;
+	}
+
+	.qr.qr-momo {
+		width: 85%;
+		border-radius: 8px;
+	}
+
+	.qr.qr-banking {
+		width: 100%;
+	}
+
+	.qr.qr-paypal {
+		width: 100%;
+	}
+}
+

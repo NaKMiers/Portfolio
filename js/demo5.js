@@ -118,12 +118,32 @@ const toggleVisible = () => {
    }
 }
 
-const moreDetail = document.querySelector('.more-detail')
-const moreDetailContent = document.querySelector('.more-detail-content')
-moreDetail.onclick = () => {
-   // moreDetailContent.style.height = '100rem'
-   // moreDetailContent.style.maxHeight = '80vh'
-   console.log(moreDetailContent.offsetHeight)
+const prevBtn = document.querySelector('.prev-btn')
+const nextBtn = document.querySelector('.next-btn')
+const mySlides = document.querySelectorAll('.my-slide')
+let count = 0
+prevBtn.onclick = () => {
+   console.log(mySlides)
+   count == 0 ? (count = mySlides.length - 1) : count--
+   mySlides.forEach((slide, index) => {
+      if (index === count) {
+         slide.classList.add('active')
+      } else {
+         slide.classList.remove('active')
+      }
+   })
+}
+
+nextBtn.onclick = () => {
+   console.log(mySlides)
+   count == mySlides.length - 1 ? (count = 0) : count++
+   mySlides.forEach((slide, index) => {
+      if (index === count) {
+         slide.classList.add('active')
+      } else {
+         slide.classList.remove('active')
+      }
+   })
 }
 
 window.addEventListener('scroll', toggleVisible)
