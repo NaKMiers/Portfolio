@@ -356,6 +356,7 @@
 }
 
 .prev-btn {
+	text-align: left;
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -376,7 +377,9 @@
 	box-shadow: 0 2px 24px -2px rgba(0, 0, 0, 0.2);
 }
 
-.next-btn {position: absolute;
+.next-btn {
+	text-align: right;
+	position: absolute;
 	top: 50%;
 	right: 0;
 	transform: translateY(-50%);
@@ -536,8 +539,19 @@
 	}
 }
 
+@media screen and (max-width: 42.5rem) {
+	.container {
+		margin-bottom: 16rem;
+	}
+}
+
 
 @media screen and (max-width: 31.25rem) {
+
+	.container {
+		margin-bottom: 28rem;
+	}
+
 	.slideshow-container {
 		position: relative;
 		height: auto;
