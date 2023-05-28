@@ -21,8 +21,6 @@ var cursor = {
    updateCursor: function (e) {
       var self = this
 
-      console.log(e)
-
       // Show the cursor
       self.cursorVisible = true
       self.toggleCursorVisibility()

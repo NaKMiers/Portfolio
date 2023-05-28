@@ -123,7 +123,6 @@ const nextBtn = document.querySelector('.next-btn')
 const mySlides = document.querySelectorAll('.my-slide')
 let count = 0
 prevBtn.onclick = () => {
-   console.log(mySlides)
    count == 0 ? (count = mySlides.length - 1) : count--
    mySlides.forEach((slide, index) => {
       if (index === count) {
@@ -135,7 +134,6 @@ prevBtn.onclick = () => {
 }
 
 nextBtn.onclick = () => {
-   console.log(mySlides)
    count == mySlides.length - 1 ? (count = 0) : count++
    mySlides.forEach((slide, index) => {
       if (index === count) {
